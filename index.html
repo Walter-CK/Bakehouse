@@ -1,380 +1,301 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logan Reserve Bakehouse | Fresh Pies & Banh Mi</title>
     <meta name="description" content="Logan Reserve's favourite local bakery. Famous for crispy Pork Banh Mi, chunky steak pies, and fresh barista coffee. Open 7 days.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="icon" href="images/favicon.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png">
 </head>
-<body class="font-sans text-gray-800 bg-brand-50 antialiased">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-brand-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 min-w-0">
-                    <div class="w-9 h-9 flex-shrink-0 flex items-center justify-center">
-                        <img src="images/logo.jpg" alt="Logo" class="w-full h-full object-contain" />
-                    </div>
-                    <span class="font-serif text-lg sm:text-2xl text-brand-900 tracking-tight leading-tight">Logan Reserve <span class="text-brand-600">Bakehouse</span></span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-gray-600 hover:text-brand-600 font-medium transition">Home</a>
-                    <a href="#menu" class="text-gray-600 hover:text-brand-600 font-medium transition">Menu</a>
-                    <a href="#location" class="text-gray-600 hover:text-brand-600 font-medium transition">Location</a>
-                    <a href="tel:+61734167399" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full font-semibold transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                        <i class="fa-solid fa-phone mr-2"></i> Call to Order
-                    </a>
-                </div>
-
-                <!-- Mobile: Call button only (no hamburger) -->
-                <div class="md:hidden flex items-center">
-                    <a href="tel:+61734167399" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-full font-semibold text-sm transition shadow-md">
-                        <i class="fa-solid fa-phone mr-1.5"></i> Call
-                    </a>
-                </div>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="images/logo.jpg" alt="Logan Reserve Bakehouse Logo" class="nav-logo-img" />
+                <span>Logan Reserve <strong>Bakehouse</strong></span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#updates">Updates</a>
+                <a href="#menu">Menu</a>
+                <a href="#location">Location</a>
+                <a href="tel:+61734167399" class="btn btn-primary">
+                    <i class="fa-solid fa-phone"></i> Call to Order
+                </a>
             </div>
+            <a href="tel:+61734167399" class="nav-call-mobile btn btn-primary">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 hero-pattern relative overflow-hidden">
-        <!-- Hero Images -->
-        <div class="hero-images">
-            <div class="hero-image-left">
-                <img src="images/donut.jpg" alt="Fresh banh mi" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&q=80'" />
-            </div>
-            <div class="hero-image-right">
-                <img src="images/banh_mi.jpg" alt="Fresh pies" onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=80'" />
-            </div>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-blob hero-blob--left"></div>
+        <div class="hero-blob hero-blob--right"></div>
+
+        <div class="hero-img hero-img--left">
+            <img src="images/donut.jpg" alt="Fresh donuts" />
+        </div>
+        <div class="hero-img hero-img--right">
+            <img src="images/banh_mi.jpg" alt="Fresh banh mi" />
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-100 text-brand-800 text-sm font-bold mb-6">
-                    <span class="w-2 h-2 rounded-full bg-fresh-500 animate-pulse"></span>
-                    Open 7 Days a Week
-                </div>
-                <h1 class="text-5xl lg:text-7xl font-serif text-brand-900 mb-6 leading-tight">
-                    Freshly Baked.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-500">Locally Loved.</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    From crispy <span class="font-bold text-brand-700">Vietnamese Banh Mi</span> to chunky steak pies and barista-made coffee. We are Logan Reserve's daily stop for good food.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#menu" class="bg-brand-600 hover:bg-brand-700 text-white text-lg px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        View Menu
-                    </a>
-                    <a href="#location" class="bg-white hover:bg-gray-50 text-brand-900 border-2 border-brand-200 text-lg px-8 py-4 rounded-xl font-bold transition shadow-sm hover:shadow-md">
-                        Find Us
-                    </a>
-                </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Open 7 Days a Week
+            </div>
+            <h1 class="hero-heading">
+                Freshly Baked.<br>
+                <span class="hero-heading-accent">Locally Loved.</span>
+            </h1>
+            <p class="hero-sub">
+                From crispy <strong>Vietnamese Banh Mi</strong> to chunky steak pies and barista-made coffee — Logan Reserve's daily stop for good food.
+            </p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="#location" class="btn btn-outline btn-lg">Find Us</a>
             </div>
         </div>
-        
-        <!-- Decorative blobs -->
-        <div class="hero-blob-1"></div>
-        <div class="hero-blob-2"></div>
     </section>
 
-    <!-- Updates Section -->
-    <section id="updates" class="py-14 bg-white border-b border-brand-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between mb-8">
+    <!-- Updates -->
+    <section id="updates" class="section updates-section">
+        <div class="container">
+            <div class="section-header">
                 <div>
-                    <h2 class="font-serif text-3xl text-brand-900">Latest Updates</h2>
-                    <p class="text-gray-500 text-sm mt-1">What's on at the Bakehouse</p>
+                    <h2 class="section-title">Latest Updates</h2>
+                    <p class="section-sub">What's on at the Bakehouse</p>
                 </div>
-                <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" target="_blank" class="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold text-sm transition">
-                    <i class="fa-brands fa-facebook text-lg"></i>
-                    Follow us
+                <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" target="_blank" class="fb-link">
+                    <i class="fa-brands fa-facebook"></i> Follow us
                 </a>
             </div>
-
-            <!-- Horizontally scrollable cards -->
-            <div class="updates-scroll-container">
-                <!-- Post Card 1 -->
+            <div class="updates-scroll">
                 <div class="update-card">
                     <div class="update-card-img">
-                        <img src="images/banh_mi.jpg" alt="Banh Mi Special" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80'" />
+                        <img src="images/banh_mi.jpg" alt="Roast Pork Banh Mi" />
                     </div>
                     <div class="update-card-body">
-                        <span class="update-card-date"><i class="fa-regular fa-calendar mr-1.5"></i>15 May 2026</span>
-                        <h3 class="update-card-title">🔥 Weekend Special: Roast Pork Banh Mi</h3>
-                        <p class="update-card-desc">Our crispy pork banh mi is back for the weekend — extra crackling, limited quantities. Get in early before we sell out!</p>
+                        <span class="update-date"><i class="fa-regular fa-calendar"></i> 15 May 2026</span>
+                        <h3 class="update-title">🔥 Weekend Special: Roast Pork Banh Mi</h3>
+                        <p class="update-desc">Crispy pork banh mi back for the weekend — extra crackling, limited quantities. Get in early before we sell out!</p>
                     </div>
                 </div>
-
-                <!-- Post Card 2 -->
                 <div class="update-card">
                     <div class="update-card-img">
-                        <img src="images/donut.jpg" alt="New Donuts" onerror="this.src='https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80'" />
+                        <img src="images/donut.jpg" alt="Caramel Donuts" />
                     </div>
                     <div class="update-card-body">
-                        <span class="update-card-date"><i class="fa-regular fa-calendar mr-1.5"></i>10 May 2026</span>
-                        <h3 class="update-card-title">🍩 New: Caramel Glazed Donuts</h3>
-                        <p class="update-card-desc">Fresh caramel donuts now available daily from 7am. Pairs perfectly with your morning coffee — come try one!</p>
+                        <span class="update-date"><i class="fa-regular fa-calendar"></i> 10 May 2026</span>
+                        <h3 class="update-title">🍩 New: Caramel Glazed Donuts</h3>
+                        <p class="update-desc">Fresh caramel donuts available daily from 7am. Pairs perfectly with your morning coffee.</p>
                     </div>
                 </div>
-
-                <!-- Post Card 3 -->
                 <div class="update-card">
-                    <div class="update-card-img update-card-img--placeholder">
-                        <i class="fa-solid fa-clock text-4xl text-brand-400"></i>
+                    <div class="update-card-img update-card-img--icon">
+                        <i class="fa-solid fa-clock"></i>
                     </div>
                     <div class="update-card-body">
-                        <span class="update-card-date"><i class="fa-regular fa-calendar mr-1.5"></i>1 May 2026</span>
-                        <h3 class="update-card-title">📅 Public Holiday Hours</h3>
-                        <p class="update-card-desc">We'll be open on the upcoming public holiday — slightly later start at 7am. Come visit us, we'd love to see you.</p>
+                        <span class="update-date"><i class="fa-regular fa-calendar"></i> 1 May 2026</span>
+                        <h3 class="update-title">📅 Public Holiday Hours</h3>
+                        <p class="update-desc">Open on the upcoming public holiday — slightly later start at 7am. Come visit us!</p>
                     </div>
                 </div>
-
-                <!-- Post Card 4 -->
                 <div class="update-card">
-                    <div class="update-card-img update-card-img--placeholder">
-                        <i class="fa-solid fa-star text-4xl text-brand-400"></i>
-                    </div>
-                    <div class="update-card-body">
-                        <span class="update-card-date"><i class="fa-regular fa-calendar mr-1.5"></i>22 Apr 2026</span>
-                        <h3 class="update-card-title">⭐ Thank You for 500 Reviews!</h3>
-                        <p class="update-card-desc">We've hit 500 Google reviews and we couldn't be more grateful. Thank you Logan Reserve for the love and support over the years.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features / Quick Highlights -->
-    <section class="py-12 bg-white border-y border-brand-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 rounded-2xl bg-brand-50 hover:bg-brand-100 transition duration-300">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-brand-600 text-2xl shadow-sm mb-4">
+                    <div class="update-card-img update-card-img--icon">
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="font-serif text-xl text-brand-900 font-bold mb-2">Famous Banh Mi</h3>
-                    <p class="text-gray-600">Crispy baguettes, pate, fresh herbs, and our signature roast pork. The local favourite.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-brand-50 hover:bg-brand-100 transition duration-300">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-brand-600 text-2xl shadow-sm mb-4">
-                        <i class="fa-solid fa-mug-hot"></i>
+                    <div class="update-card-body">
+                        <span class="update-date"><i class="fa-regular fa-calendar"></i> 22 Apr 2026</span>
+                        <h3 class="update-title">⭐ Thank You for 500 Reviews!</h3>
+                        <p class="update-desc">We've hit 500 Google reviews — thank you Logan Reserve for the love and support.</p>
                     </div>
-                    <h3 class="font-serif text-xl text-brand-900 font-bold mb-2">Barista Coffee</h3>
-                    <p class="text-gray-600">Start your morning right with our expertly poured espresso blends.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-brand-50 hover:bg-brand-100 transition duration-300">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-brand-600 text-2xl shadow-sm mb-4">
-                        <i class="fa-solid fa-temperature-arrow-up"></i>
-                    </div>
-                    <h3 class="font-serif text-xl text-brand-900 font-bold mb-2">Hot Pies Daily</h3>
-                    <p class="text-gray-600">Chunky steak, bacon & cheese, and more. Baked fresh on-site every morning.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl text-brand-900 mb-4">Our Menu Favourites</h2>
-                <div class="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
-            </div>
-
-            <!-- Category: Vietnamese -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold text-brand-800 mb-6 flex items-center gap-3">
-                    <i class="fa-solid fa-pepper-hot text-brand-500"></i> Vietnamese Banh Mi
-                </h3>
-                <div class="grid gap-4">
-                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900 text-lg">Roasted Pork (Crispy Skin)</h4>
-                            <p class="text-gray-500 text-sm">Pate, mayo, cucumber, pickled carrots, coriander, chilli.</p>
-                        </div>
-                        <span class="font-bold text-brand-600">$15.00</span>
-                    </div>
-                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900 text-lg">Grilled Pork Roll</h4>
-                            <p class="text-gray-500 text-sm">Marinated grilled pork with all the fresh salad trimmings.</p>
-                        </div>
-                        <span class="font-bold text-brand-600">$13.00</span>
-                    </div>
-                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900 text-lg">Grilled Chicken Roll</h4>
-                            <p class="text-gray-500 text-sm">Tender lemongrass chicken.</p>
-                        </div>
-                        <span class="font-bold text-brand-600">$13.00</span>
-                    </div>
+    <!-- Highlights -->
+    <section class="section highlights-section">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Famous Banh Mi</h3>
+                    <p>Crispy baguettes, pate, fresh herbs, and our signature roast pork. The local favourite.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h3>Barista Coffee</h3>
+                    <p>Start your morning right with our expertly poured espresso blends.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                    <h3>Hot Pies Daily</h3>
+                    <p>Chunky steak, bacon & cheese, and more. Baked fresh on-site every morning.</p>
                 </div>
             </div>
-
-            <!-- Category: Pies -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold text-brand-800 mb-6 flex items-center gap-3">
-                    <i class="fa-solid fa-chart-pie text-brand-500"></i> Classic Pies & Sausage Rolls
-                </h3>
-                <div class="grid gap-4">
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Plain Chunky Steak</h4>
-                        <span class="font-bold text-brand-600">$8.80</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Steak, Bacon & Cheese</h4>
-                        <span class="font-bold text-brand-600">$8.80</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Curry Steak Pie</h4>
-                        <span class="font-bold text-brand-600">$8.80</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Potato Pie</h4>
-                        <span class="font-bold text-brand-600">$9.80</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Sausage Roll (Plain / Cheese & Bacon)</h4>
-                        <span class="font-bold text-brand-600">from $6.50</span>
-                    </div>
-                </div>
-            </div>
-
-             <!-- Category: Sweets -->
-             <div>
-                <h3 class="text-2xl font-bold text-brand-800 mb-6 flex items-center gap-3">
-                    <i class="fa-solid fa-cookie-bite text-brand-500"></i> Sweets & Cakes
-                </h3>
-                <div class="grid gap-4">
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Vanilla Slice</h4>
-                        <span class="font-bold text-brand-600">Ask in store</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Apple Turnover</h4>
-                        <span class="font-bold text-brand-600">$7.20</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Caramel Donuts</h4>
-                        <span class="font-bold text-brand-600">$5.80</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <h4 class="font-bold text-gray-900 text-lg">Fresh Cream Buns</h4>
-                        <span class="font-bold text-brand-600">Various</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Location & Contact -->
-    <section id="location" class="bg-brand-900 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Info -->
-                <div class="space-y-8">
+    <!-- Menu -->
+    <section id="menu" class="section menu-section">
+        <div class="container container--narrow">
+            <div class="section-title-center">
+                <h2 class="section-title">Our Menu Favourites</h2>
+                <div class="section-rule"></div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="menu-category-title">
+                    <i class="fa-solid fa-pepper-hot"></i> Vietnamese Banh Mi
+                </h3>
+                <div class="menu-item">
                     <div>
-                        <h2 class="font-serif text-4xl mb-4">Visit Us</h2>
-                        <p class="text-brand-200 text-lg">Located conveniently in the Logan Reserve Shopping Village. Easy parking available.</p>
+                        <h4>Roasted Pork (Crispy Skin)</h4>
+                        <p>Pate, mayo, cucumber, pickled carrots, coriander, chilli.</p>
                     </div>
+                    <span class="menu-price">$15.00</span>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h4>Grilled Pork Roll</h4>
+                        <p>Marinated grilled pork with all the fresh salad trimmings.</p>
+                    </div>
+                    <span class="menu-price">$13.00</span>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h4>Grilled Chicken Roll</h4>
+                        <p>Tender lemongrass chicken.</p>
+                    </div>
+                    <span class="menu-price">$13.00</span>
+                </div>
+            </div>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-800 p-3 rounded-lg">
-                                <i class="fa-solid fa-location-dot text-xl text-brand-400"></i>
-                            </div>
+            <div class="menu-category">
+                <h3 class="menu-category-title">
+                    <i class="fa-solid fa-chart-pie"></i> Classic Pies & Sausage Rolls
+                </h3>
+                <div class="menu-item">
+                    <h4>Plain Chunky Steak</h4>
+                    <span class="menu-price">$8.80</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Steak, Bacon & Cheese</h4>
+                    <span class="menu-price">$8.80</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Curry Steak Pie</h4>
+                    <span class="menu-price">$8.80</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Potato Pie</h4>
+                    <span class="menu-price">$9.80</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Sausage Roll (Plain / Cheese & Bacon)</h4>
+                    <span class="menu-price">from $6.50</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="menu-category-title">
+                    <i class="fa-solid fa-cookie-bite"></i> Sweets & Cakes
+                </h3>
+                <div class="menu-item">
+                    <h4>Vanilla Slice</h4>
+                    <span class="menu-price">Ask in store</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Apple Turnover</h4>
+                    <span class="menu-price">$7.20</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Caramel Donuts</h4>
+                    <span class="menu-price">$5.80</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Fresh Cream Buns</h4>
+                    <span class="menu-price">Various</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="section location-section">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <h2 class="section-title section-title--light">Visit Us</h2>
+                    <p class="location-intro">Located in the Logan Reserve Shopping Village. Easy parking available.</p>
+
+                    <div class="location-details">
+                        <div class="location-item">
+                            <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <div>
-                                <h4 class="font-bold text-xl mb-1">Address</h4>
-                                <a href="https://www.google.com/maps/dir//Logan+Reserve+Bakehouse+Logan+Reserve+QLD" class="text-brand-100">Shop 10, 450-458 Chambers Flat Road,<br>Logan Reserve QLD 4133</a>
+                                <h4>Address</h4>
+                                <a href="https://www.google.com/maps/dir//Logan+Reserve+Bakehouse+Logan+Reserve+QLD">
+                                    Shop 10, 450-458 Chambers Flat Road,<br>Logan Reserve QLD 4133
+                                </a>
                             </div>
                         </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-800 p-3 rounded-lg">
-                                <i class="fa-solid fa-clock text-xl text-brand-400"></i>
-                            </div>
+                        <div class="location-item">
+                            <div class="location-icon"><i class="fa-solid fa-clock"></i></div>
                             <div>
-                                <h4 class="font-bold text-xl mb-2">Opening Hours</h4>
-                                <ul class="text-brand-100 space-y-1.5">
-                                    <li class="flex justify-between gap-8">
-                                        <span class="font-medium">Monday - Friday</span>
-                                        <span class="text-right">5:00am - 6:00pm</span>
-                                    </li>
-                                    <li class="flex justify-between gap-8">
-                                        <span class="font-medium">Saturday - Sunday</span>
-                                        <span class="text-right">6:00am - 6:00pm</span>
-                                    </li>
-                                </ul>
+                                <h4>Opening Hours</h4>
+                                <div class="hours">
+                                    <span>Monday – Friday</span><span>5:00am – 6:00pm</span>
+                                    <span>Saturday – Sunday</span><span>6:00am – 6:00pm</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-800 p-3 rounded-lg">
-                                <i class="fa-solid fa-phone text-xl text-brand-400"></i>
-                            </div>
+                        <div class="location-item">
+                            <div class="location-icon"><i class="fa-solid fa-phone"></i></div>
                             <div>
-                                <h4 class="font-bold text-xl mb-1">Contact</h4>
-                                <a href="tel:+61734167399" class="text-brand-100 text-2xl font-bold hover:text-brand-400 transition">(07) 3416 7399</a>
+                                <h4>Contact</h4>
+                                <a href="tel:+61734167399" class="location-phone">(07) 3416 7399</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Map -->
-                <div class="h-96 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-800 relative bg-gray-200 group">
-                    <a href="https://www.google.com/maps/dir//Logan+Reserve+Bakehouse+Logan+Reserve+QLD" target="_blank" class="block w-full h-full relative">
-                        <img src="images/plateu.jpg" 
-                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500"
-                             alt="Map location of Logan Reserve Bakehouse"
-                             onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'" />
-                        
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
-                            <button class="bg-white text-brand-900 px-6 py-3 rounded-full font-bold shadow-lg transform group-hover:scale-105 transition flex items-center gap-2">
-                                <i class="fa-solid fa-map-location-dot"></i> Get Directions
-                            </button>
+                <div class="location-map">
+                    <a href="https://www.google.com/maps/dir//Logan+Reserve+Bakehouse+Logan+Reserve+QLD" target="_blank">
+                        <img src="images/plateu.jpg" alt="Logan Reserve Bakehouse location" />
+                        <div class="map-overlay">
+                            <span><i class="fa-solid fa-map-location-dot"></i> Get Directions</span>
                         </div>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-950 text-brand-400 py-8 border-t border-brand-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-sm">
-                &copy; 2026 Logan Reserve Bakehouse. All rights reserved.
-            </div>
-            <div class="flex gap-6">
-                <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" class="hover:text-white transition"><i class="fa-brands fa-facebook text-xl"></i></a>
-            </div>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Logan Reserve Bakehouse. All rights reserved.</p>
+            <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
