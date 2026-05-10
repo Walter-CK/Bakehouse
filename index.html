@@ -304,6 +304,25 @@
             </a>
         </div>
     </footer>
-
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="" />
+    </div>
+    
+    <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    document.querySelectorAll('.update-card-img img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('open');
+        });
+    });
+    
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    </script>
 </body>
 </html>
