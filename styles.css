@@ -374,27 +374,20 @@ a { text-decoration: none; color: inherit; }
 
 .update-card-img {
     width: 100%;
-    height: 220px;
-    overflow: hidden;
     background: var(--gold-200);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
 }
 .update-card-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    height: auto;
     display: block;
-    max-width: none;
 }
 .update-card-img video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    min-height: 180px;
     display: block;
+    background: #000;
 }
 .update-card-img--icon {
     background: var(--gold-100);
