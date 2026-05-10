@@ -38,7 +38,7 @@
     </nav>
 
     <!-- Hero -->
-    <section id="home" class="hero">
+    <section id="home" class="section-snap hero">
         <div class="hero-blob hero-blob--left"></div>
         <div class="hero-blob hero-blob--right"></div>
 
@@ -69,7 +69,7 @@
     </section>
 
     <!-- Updates -->
-    <section id="updates" class="section updates-section">
+    <section id="updates" class="section-snap updates-section">
         <div class="container">
             <div class="section-header">
                 <div>
@@ -79,7 +79,7 @@
                     <i class="fa-brands fa-facebook"></i> Follow us
                 </a>
             </div>
-            <div class="updates-scroll">
+            <div class="updates-scroll" id="updatesScroll">
                 <div class="update-card">
                     <div class="update-card-img">
                         <video autoplay muted loop playsinline preload="auto">
@@ -133,92 +133,266 @@
     </section>
     
     <!-- Menu -->
-    <section id="menu" class="section menu-section">
+    <section id="menu" class="section-snap menu-section">
         <div class="container container--narrow">
             <div class="section-title-center">
-                <h2 class="section-title">Our Menu Favourites</h2>
+                <h2 class="section-title">Full Menu</h2>
                 <div class="section-rule"></div>
             </div>
 
-            <div class="menu-category">
-                <h3 class="menu-category-title">
-                    <i class="fa-solid fa-pepper-hot"></i> Vietnamese Banh Mi
-                </h3>
-                <div class="menu-item">
-                    <div>
-                        <h4>Roasted Pork (Crispy Skin)</h4>
-                        <p>Pate, mayo, cucumber, pickled carrots, coriander, chilli.</p>
-                    </div>
-                    <span class="menu-price">$15.00</span>
+            <!-- Bread -->
+            <details class="menu-accordion" open>
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-bread-slice"></i> Bread</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Meringue Worm</h4></div><span class="menu-price">$4.50</span></div>
+                    <div class="menu-item"><div><h4>White High Top Unsliced</h4></div><span class="menu-price">$6.00</span></div>
+                    <div class="menu-item"><div><h4>Hot Dog Rolls</h4><p>Pack of six.</p></div><span class="menu-price">$7.20</span></div>
+                    <div class="menu-item"><div><h4>Whole Meal Loaves</h4><p>Add sliced available.</p></div><span class="menu-price">$5.80</span></div>
+                    <div class="menu-item"><div><h4>Marshmallow Corn</h4></div><span class="menu-price">$4.50</span></div>
+                    <div class="menu-item"><div><h4>Jam Doughnuts</h4></div><span class="menu-price">$5.80</span></div>
+                    <div class="menu-item"><div><h4>Fresh Sliced White Loaves</h4></div><span class="menu-price">$5.80</span></div>
+                    <div class="menu-item"><div><h4>Plain Croissant</h4></div><span class="menu-price">$5.20</span></div>
+                    <div class="menu-item"><div><h4>Nutella Doughnuts</h4></div><span class="menu-price">$5.80</span></div>
+                    <div class="menu-item"><div><h4>White High Top Sliced</h4></div><span class="menu-price">$6.00</span></div>
+                    <div class="menu-item"><div><h4>Pack Rolls</h4><p>Pack of six.</p></div><span class="menu-price">$6.80</span></div>
+                    <div class="menu-item"><div><h4>Scroll Vegemite</h4></div><span class="menu-price">$4.50</span></div>
+                    <div class="menu-item"><div><h4>Apple Danish</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>French Stick No Seed</h4></div><span class="menu-price">$5.90</span></div>
+                    <div class="menu-item"><div><h4>Hamburger 6 Packs</h4></div><span class="menu-price">$5.80</span></div>
+                    <div class="menu-item"><div><h4>Blueberry Danish</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Hawaiian Pizza</h4></div><span class="menu-price">$5.20</span></div>
+                    <div class="menu-item"><div><h4>Ham And Cheese Croissant Toasted</h4></div><span class="menu-price">$7.90</span></div>
+                    <div class="menu-item"><div><h4>Dinner Rolls</h4><p>Served as 6 packs.</p></div><span class="menu-price">$5.20</span></div>
+                    <div class="menu-item"><div><h4>6 Pack Vietnamese Rolls</h4><p>Pack of six.</p></div><span class="menu-price">$7.20</span></div>
+                    <div class="menu-item"><div><h4>Caramel Doughnuts</h4></div><span class="menu-price">$5.80</span></div>
+                    <div class="menu-item"><div><h4>Large Cob Loaves Unsliced</h4></div><span class="menu-price">$6.20</span></div>
+                    <div class="menu-item"><div><h4>Cinnamon Twist Doughnuts</h4></div><span class="menu-price">$5.20</span></div>
+                    <div class="menu-item"><div><h4>Vienna Unsliced</h4></div><span class="menu-price">$6.20</span></div>
+                    <div class="menu-item"><div><h4>Mock Cream Large Flower Buns</h4></div><span class="menu-price">$12.00</span></div>
+                    <div class="menu-item"><div><h4>Meat Lover Pizza</h4></div><span class="menu-price">$5.20</span></div>
                 </div>
-                <div class="menu-item">
-                    <div>
-                        <h4>Grilled Pork Roll</h4>
-                        <p>Marinated grilled pork with all the fresh salad trimmings.</p>
-                    </div>
-                    <span class="menu-price">$13.00</span>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <h4>Grilled Chicken Roll</h4>
-                        <p>Tender lemongrass chicken.</p>
-                    </div>
-                    <span class="menu-price">$13.00</span>
-                </div>
-            </div>
+            </details>
 
-            <div class="menu-category">
-                <h3 class="menu-category-title">
-                    <i class="fa-solid fa-chart-pie"></i> Classic Pies & Sausage Rolls
-                </h3>
-                <div class="menu-item">
-                    <h4>Plain Chunky Steak</h4>
-                    <span class="menu-price">$8.80</span>
+            <!-- Wraps & Focaccia -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-utensils"></i> Wraps & Focaccia</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Chicken And Avocado Wrap</h4></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Chicken Focaccia</h4></div><span class="menu-price">$15.60</span></div>
+                    <div class="menu-item"><div><h4>Ham And Avocado Wrap</h4></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Ham Focaccia</h4></div><span class="menu-price">$15.60</span></div>
                 </div>
-                <div class="menu-item">
-                    <h4>Steak, Bacon & Cheese</h4>
-                    <span class="menu-price">$8.80</span>
-                </div>
-                <div class="menu-item">
-                    <h4>Curry Steak Pie</h4>
-                    <span class="menu-price">$8.80</span>
-                </div>
-                <div class="menu-item">
-                    <h4>Potato Pie</h4>
-                    <span class="menu-price">$9.80</span>
-                </div>
-                <div class="menu-item">
-                    <h4>Sausage Roll (Plain / Cheese & Bacon)</h4>
-                    <span class="menu-price">from $6.50</span>
-                </div>
-            </div>
+            </details>
 
-            <div class="menu-category">
-                <h3 class="menu-category-title">
-                    <i class="fa-solid fa-cookie-bite"></i> Sweets & Cakes
-                </h3>
-                <div class="menu-item">
-                    <h4>Vanilla Slice</h4>
-                    <span class="menu-price">Ask in store</span>
+            <!-- Vietnamese Banh Mi -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-pepper-hot"></i> Vietnamese Banh Mi</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Roasted Pork Banh Mi</h4><p>Roasted pork, pate, butter, pickled carrots, cucumber, shallot, and coriander with homemade special sauce in a Vietnamese baguette.</p></div><span class="menu-price">$15.60</span></div>
+                    <div class="menu-item"><div><h4>Lemongrass Chicken Banh Mi</h4><p>Grilled lemongrass chicken, pate, butter, pickled carrots, cucumber, shallot, and coriander with homemade special sauce.</p></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>BBQ Pork Banh Mi</h4><p>BBQ pork, pate, butter, pickled carrots, cucumber, shallot, and coriander with homemade special sauce.</p></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Grilled Chicken Banh Mi</h4><p>Grilled chicken, pate, butter, pickled carrots, cucumber, shallot, and coriander with homemade special sauce.</p></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Vietnamese Signature Banh Mi</h4><p>Slow cooked pork, pork meat ball, pork cake, pate, butter, pickled carrots, cucumber, shallot, and coriander with homemade special sauce.</p></div><span class="menu-price">$15.60</span></div>
+                    <div class="menu-item"><div><h4>Grilled Pork Banh Mi</h4><p>Grilled pork, pate, butter, pickled carrots, cucumber, shallot, and coriander with homemade special sauce.</p></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Fried Rice</h4></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Fried Noodles</h4><p>Stir-fried noodles with carrot, cabbage served with grilled pork and BBQ pork.</p></div><span class="menu-price">$14.50</span></div>
                 </div>
-                <div class="menu-item">
-                    <h4>Apple Turnover</h4>
-                    <span class="menu-price">$7.20</span>
+            </details>
+
+            <!-- Vermicelli Salad Bowls -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-bowl-food"></i> Vermicelli Salad Bowls</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Grilled Pork Noodle Salad Bowl</h4><p>Gluten free. Grilled pork, pickled carrots, cucumber with sweet fish sauce, fried onion, and peanuts.</p></div><span class="menu-price">$17.50</span></div>
+                    <div class="menu-item"><div><h4>Lemongrass Chicken Noodle Salad Bowl</h4><p>Gluten free. Grilled lemongrass chicken, pickled carrots, cucumber with sweet fish sauce, fried onion, and peanuts.</p></div><span class="menu-price">$17.50</span></div>
+                    <div class="menu-item"><div><h4>Grilled Chicken Noodle Salad Bowl</h4><p>Gluten free. Grilled chicken, pickled carrots, cucumber with sweet fish sauce, fried onion, and peanuts.</p></div><span class="menu-price">$17.50</span></div>
+                    <div class="menu-item"><div><h4>Combination Noodle Salad Bowl</h4><p>Gluten free. Grilled pork, spring rolls, pork meat ball, pickled carrots, cucumber with sweet fish sauce, fried onion, and peanuts.</p></div><span class="menu-price">$17.50</span></div>
                 </div>
-                <div class="menu-item">
-                    <h4>Caramel Donuts</h4>
-                    <span class="menu-price">$5.80</span>
+            </details>
+
+            <!-- Rice Paper Rolls -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-leaf"></i> Rice Paper Rolls</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Chicken & Avocado Rice Paper Rolls</h4></div><span class="menu-price">$11.00</span></div>
+                    <div class="menu-item"><div><h4>Pork And Prawns Rice Paper Rolls</h4></div><span class="menu-price">$11.00</span></div>
+                    <div class="menu-item"><div><h4>Lemongrass Chicken Rice Paper Rolls</h4><p>Savoury lemongrass chicken in rice paper rolls.</p></div><span class="menu-price">$11.00</span></div>
+                    <div class="menu-item"><div><h4>BBQ Pork Rice Paper Rolls</h4><p>Savoury barbecue pork in rice paper rolls.</p></div><span class="menu-price">$11.00</span></div>
+                    <div class="menu-item"><div><h4>Grilled Chicken Rice Paper Rolls</h4></div><span class="menu-price">$11.00</span></div>
+                    <div class="menu-item"><div><h4>Grilled Pork Rice Paper Rolls</h4></div><span class="menu-price">$11.00</span></div>
                 </div>
-                <div class="menu-item">
-                    <h4>Fresh Cream Buns</h4>
-                    <span class="menu-price">Various</span>
+            </details>
+
+            <!-- Salad Rolls -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-seedling"></i> Salad Rolls</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Ham Salad Roll</h4></div><span class="menu-price">$13.00</span></div>
+                    <div class="menu-item"><div><h4>Chicken Salad Roll</h4><p>Fresh chicken salad in a roll, a light and healthy option.</p></div><span class="menu-price">$13.00</span></div>
                 </div>
-            </div>
+            </details>
+
+            <!-- Sandwiches -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-sandwich"></i> Sandwiches</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Chicken, Cheese And Lettuce Sandwich</h4></div><span class="menu-price">$9.80</span></div>
+                    <div class="menu-item"><div><h4>Eggs And Lettuce Sandwich</h4></div><span class="menu-price">$9.80</span></div>
+                    <div class="menu-item"><div><h4>Ham, Cheese And Tomato Sandwich</h4></div><span class="menu-price">$9.80</span></div>
+                </div>
+            </details>
+
+            <!-- Hot Food -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-fire-flame-curved"></i> Hot Food</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Quiche Lorraine</h4><p>Classic quiche Lorraine, rich and savoury with a flaky crust.</p></div><span class="menu-price">$8.50</span></div>
+                    <div class="menu-item"><div><h4>Smokey Dog</h4><p>Rich and smoky flavours, a satisfying hot dog treat.</p></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Spinach And Feta</h4></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Chunky Steak Pepper Pie</h4><p>Chunky steak with a peppery twist in a hearty pie.</p></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Chunky Beef Curry Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Mince & Veggie Pasty</h4><p>Beef and vegetables.</p></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Chunky Steak Cheese Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Roasted Pork Gravy Roll</h4></div><span class="menu-price">$13.00</span></div>
+                    <div class="menu-item"><div><h4>Vietnamese Pork Meatball Skewer</h4></div><span class="menu-price">$6.00</span></div>
+                    <div class="menu-item"><div><h4>Mini Quiche</h4></div><span class="menu-price">$4.50</span></div>
+                    <div class="menu-item"><div><h4>Curry Beef Minced</h4></div><span class="menu-price">$8.80</span></div>
+                    <div class="menu-item"><div><h4>Beef Minced And Cheese</h4></div><span class="menu-price">$8.80</span></div>
+                    <div class="menu-item"><div><h4>Steak, Tomato And Onion Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Classic Beef Minced Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Pork Spring Rolls</h4><p>Three pieces.</p></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Plain Sausage Roll</h4><p>Large.</p></div><span class="menu-price">$6.90</span></div>
+                    <div class="menu-item"><div><h4>Cheese Bacon Sausage Roll</h4></div><span class="menu-price">$7.50</span></div>
+                    <div class="menu-item"><div><h4>Mini Pie</h4><p>Mini mince pie.</p></div><span class="menu-price">$4.50</span></div>
+                    <div class="menu-item"><div><h4>Steak, Cheese And Bacon Pie</h4><p>Hearty pie filled with steak, cheese, and bacon.</p></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Potato Pie</h4></div><span class="menu-price">$9.75</span></div>
+                    <div class="menu-item"><div><h4>Quiche Vegetarian</h4></div><span class="menu-price">$8.50</span></div>
+                    <div class="menu-item"><div><h4>Plain Chunky Beef</h4></div><span class="menu-price">$8.80</span></div>
+                    <div class="menu-item"><div><h4>Chunky Steak Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Curry Sausage Rolls</h4></div><span class="menu-price">$6.90</span></div>
+                    <div class="menu-item"><div><h4>Chunky Beef Bacon Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Creamy Chicken And Vegetable Pie</h4></div><span class="menu-price">$8.80</span></div>
+                    <div class="menu-item"><div><h4>Chunky Beef Mushroom Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Creamy Chicken Curry</h4></div><span class="menu-price">$8.80</span></div>
+                    <div class="menu-item"><div><h4>Steak Kidney Pie</h4></div><span class="menu-price">$8.90</span></div>
+                    <div class="menu-item"><div><h4>Sauce (BBQ or Tomato)</h4><p>Please leave a note of your choice.</p></div><span class="menu-price">$0.80</span></div>
+                </div>
+            </details>
+
+            <!-- Slice -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-cake-candles"></i> Slice</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Caramel Cheesecake Slice</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Mock Cream Doughnut</h4><p>Large.</p></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Mud Cake Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Apple Slice</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Vanilla Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Lemon Meringue Pie Slice</h4><p>Small.</p></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Custard Tart Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Strawberry Cheesecake Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Apple Turnover Slice</h4></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Caramel Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Lamington With Cream Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>French Vanilla Slice</h4></div><span class="menu-price">$7.50</span></div>
+                    <div class="menu-item"><div><h4>Passion Fruit Cheesecake Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Caramel Cheesecake</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Carrot Cake Slice</h4></div><span class="menu-price">$7.00</span></div>
+                    <div class="menu-item"><div><h4>Plain Lamington</h4></div><span class="menu-price">$4.50</span></div>
+                    <div class="menu-item"><div><h4>Fresh Cream Doughnut</h4><p>Small.</p></div><span class="menu-price">$7.00</span></div>
+                </div>
+            </details>
+
+            <!-- Cakes -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-birthday-cake"></i> Cakes</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Family Apple Pie</h4></div><span class="menu-price">$20.00</span></div>
+                    <div class="menu-item"><div><h4>Honey Swiss Roll Cake</h4></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Carrot Cake Bar</h4></div><span class="menu-price">$16.50</span></div>
+                    <div class="menu-item"><div><h4>Apple Tea Cake</h4></div><span class="menu-price">$12.50</span></div>
+                    <div class="menu-item"><div><h4>Apple Pie</h4></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Jam Swiss Roll Cake</h4></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Black Forest Cake</h4></div><span class="menu-price">$45.00</span></div>
+                    <div class="menu-item"><div><h4>Mock Cream Vanilla Sponge Birthday Cake</h4></div><span class="menu-price">$45.00</span></div>
+                    <div class="menu-item"><div><h4>Chocolate Swiss Roll Cake</h4></div><span class="menu-price">$14.50</span></div>
+                    <div class="menu-item"><div><h4>Lemon Swiss Roll Cake</h4></div><span class="menu-price">$14.50</span></div>
+                </div>
+            </details>
+
+            <!-- Drinks -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-bottle-water"></i> Drinks</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Canned Soft Drink</h4><p>Coke, Coke Zero, Coke Diet.</p></div><span class="menu-price">$3.50</span></div>
+                    <div class="menu-item"><div><h4>Can Of Coke</h4></div><span class="menu-price">$3.50</span></div>
+                    <div class="menu-item"><div><h4>Red Fanta Bottle 600ml</h4></div><span class="menu-price">$6.80</span></div>
+                    <div class="menu-item"><div><h4>Can Of Coke No Sugar</h4></div><span class="menu-price">$3.50</span></div>
+                    <div class="menu-item"><div><h4>700ml Dare Iced Coffee</h4><p>Single shot, double shots.</p></div><span class="menu-price">$7.50</span></div>
+                    <div class="menu-item"><div><h4>Large Monster Can</h4><p>Energy drink.</p></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Bottle Of Coke No Sugar 600ml</h4></div><span class="menu-price">$6.80</span></div>
+                    <div class="menu-item"><div><h4>Peach / Lemon Iced Tea</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Soft Drink 600ml</h4><p>Coke, Coke Zero, Vanilla Coke, Fanta, Lift, Sprite.</p></div><span class="menu-price">$6.80</span></div>
+                    <div class="menu-item"><div><h4>500ml Dare Iced Coffee / Chocolate Milk / Strawberry Milk</h4><p>Single shot, double shot, triple shot; or chocolate/strawberry milk.</p></div><span class="menu-price">$6.80</span></div>
+                    <div class="menu-item"><div><h4>Large V Can</h4></div><span class="menu-price">$7.80</span></div>
+                    <div class="menu-item"><div><h4>Bottle Of Coke 600ml</h4></div><span class="menu-price">$6.80</span></div>
+                </div>
+            </details>
+
+            <!-- Hot Coffee -->
+            <details class="menu-accordion">
+                <summary class="menu-accordion-title">
+                    <span><i class="fa-solid fa-mug-hot"></i> Hot Coffee</span>
+                    <i class="fa-solid fa-chevron-down menu-chevron"></i>
+                </summary>
+                <div class="menu-accordion-body">
+                    <div class="menu-item"><div><h4>Latte</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Vietnamese Iced Coffee</h4><p>Fresh brewed coffee with full cream milk, condensed milk, and coffee mate. Served cold in a large cup.</p></div><span class="menu-price">$7.90</span></div>
+                    <div class="menu-item"><div><h4>Cappuccino</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Flat White</h4></div><span class="menu-price">$6.50</span></div>
+                    <div class="menu-item"><div><h4>Iced Latte</h4><p>2 shots of fresh coffee, iced, and milk.</p></div><span class="menu-price">$7.50</span></div>
+                    <div class="menu-item"><div><h4>Long Black</h4></div><span class="menu-price">$6.50</span></div>
+                </div>
+            </details>
+
         </div>
     </section>
 
     <!-- Location -->
-    <section id="location" class="section location-section">
+    <section id="location" class="section-snap location-section">
         <div class="container">
             <div class="location-grid">
                 <div class="location-info">
@@ -253,6 +427,12 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="location-footer-social">
+                        <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="location-map">
@@ -267,14 +447,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" target="_blank" aria-label="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-    </footer>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
@@ -282,6 +454,7 @@
     </div>
     
     <script>
+    // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     
@@ -294,6 +467,14 @@
     });
     
     lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+
+    // Horizontal scroll on mouse wheel over updates
+    const updatesScroll = document.getElementById('updatesScroll');
+    updatesScroll.addEventListener('wheel', function(e) {
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // already horizontal
+        e.preventDefault();
+        this.scrollLeft += e.deltaY;
+    }, { passive: false });
     </script>
 </body>
 </html>
