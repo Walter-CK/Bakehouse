@@ -134,11 +134,12 @@
     
     <!-- Menu -->
     <section id="menu" class="section-snap menu-section">
-        <div class="container container--narrow">
+        <div class="container">
             <div class="section-title-center">
                 <h2 class="section-title">Full Menu</h2>
                 <div class="section-rule"></div>
             </div>
+            <div class="menu-grid">
 
             <!-- Bread -->
             <details class="menu-accordion" open>
@@ -388,6 +389,7 @@
                 </div>
             </details>
 
+            </div><!-- /menu-grid -->
         </div>
     </section>
 
@@ -428,11 +430,6 @@
                         </div>
                     </div>
 
-                    <div class="location-footer-social">
-                        <a href="https://www.facebook.com/p/Logan-Reserve-Bakehouse-61557818652917/" target="_blank" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="location-map">
@@ -471,10 +468,34 @@
     // Horizontal scroll on mouse wheel over updates
     const updatesScroll = document.getElementById('updatesScroll');
     updatesScroll.addEventListener('wheel', function(e) {
-        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // already horizontal
+        // Let pure horizontal trackpad swipes pass through
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
         e.preventDefault();
-        this.scrollLeft += e.deltaY;
+        e.stopPropagation();
+        this.scrollLeft += e.deltaY * 1.5;
     }, { passive: false });
+
+    // Menu accordion: show 3 preview items, rest hidden until expanded
+    document.querySelectorAll('.menu-accordion').forEach(accordion => {
+        const items = accordion.querySelectorAll('.menu-item');
+        if (items.length > 3) {
+            items.forEach((item, i) => {
+                if (i >= 3) item.classList.add('menu-item--hidden');
+            });
+        }
+        accordion.addEventListener('toggle', () => {
+            const hidden = accordion.querySelectorAll('.menu-item--hidden');
+            if (accordion.open) {
+                hidden.forEach(item => item.style.display = '');
+            } else {
+                hidden.forEach(item => item.style.display = 'none');
+            }
+        });
+        // Initially hide extra items that are closed
+        if (!accordion.open) {
+            accordion.querySelectorAll('.menu-item--hidden').forEach(item => item.style.display = 'none');
+        }
+    });
     </script>
 </body>
 </html>
