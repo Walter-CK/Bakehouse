@@ -42,6 +42,10 @@ body {
     -webkit-overflow-scrolling: auto;
 }
 
+body::-webkit-scrollbar {
+    display: none; 
+}
+
 img { display: block; max-width: 100%; height: auto; }
 
 a { text-decoration: none; color: inherit; }
