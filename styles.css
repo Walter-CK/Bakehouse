@@ -26,7 +26,6 @@ html {
     scroll-behavior: smooth;
     background-color: var(--gold-50);
     overscroll-behavior: none;
-    overflow: hidden;
     height: 100%;
 }
 
@@ -37,7 +36,6 @@ body {
     color: var(--gray-900);
     -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;
-    overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
     /* Kill overscroll bounce on iOS */
