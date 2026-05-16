@@ -142,7 +142,7 @@
             <div class="menu-grid">
 
             <!-- Bread -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-bread-slice"></i> Bread</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -178,7 +178,7 @@
             </details>
 
             <!-- Wraps & Focaccia -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-utensils"></i> Wraps & Focaccia</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -192,7 +192,7 @@
             </details>
 
             <!-- Vietnamese Banh Mi -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-pepper-hot"></i> Vietnamese Banh Mi</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -210,7 +210,7 @@
             </details>
 
             <!-- Vermicelli Salad Bowls -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-bowl-food"></i> Vermicelli Salad Bowls</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -224,7 +224,7 @@
             </details>
 
             <!-- Rice Paper Rolls -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-leaf"></i> Rice Paper Rolls</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -240,7 +240,7 @@
             </details>
 
             <!-- Salad Rolls -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-seedling"></i> Salad Rolls</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -252,7 +252,7 @@
             </details>
 
             <!-- Sandwiches -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-sandwich"></i> Sandwiches</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -265,7 +265,7 @@
             </details>
 
             <!-- Hot Food -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-fire-flame-curved"></i> Hot Food</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -305,7 +305,7 @@
             </details>
 
             <!-- Slice -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-cake-candles"></i> Slice</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -332,7 +332,7 @@
             </details>
 
             <!-- Cakes -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-birthday-cake"></i> Cakes</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -352,7 +352,7 @@
             </details>
 
             <!-- Drinks -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-bottle-water"></i> Drinks</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -374,7 +374,7 @@
             </details>
 
             <!-- Hot Coffee -->
-            <details class="menu-accordion">
+            <details class="menu-accordion" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-mug-hot"></i> Hot Coffee</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -465,6 +465,20 @@
     
     lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
 
+
+    // Menu previews
+    document.querySelectorAll('.menu-accordion').forEach(accordion => {
+        const title = accordion.querySelector('.menu-accordion-title');
+        accordion.open = true;
+        title.setAttribute('aria-expanded', 'false');
+
+        title.addEventListener('click', event => {
+            event.preventDefault();
+            const expanded = accordion.classList.toggle('is-expanded');
+            accordion.open = true;
+            title.setAttribute('aria-expanded', String(expanded));
+        });
+    });
     // Horizontal scroll on mouse wheel over updates.
     // Convert vertical mouse-wheel movement into horizontal scrolling only while
     // the updates strip can continue moving, so the page never feels trapped.
