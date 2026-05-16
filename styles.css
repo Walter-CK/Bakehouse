@@ -24,7 +24,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: var(--gold-900);
+    background: var(--gold-950);
     overflow-x: hidden;
     max-width: 100%;
     min-height: 100%;
@@ -353,7 +353,7 @@ a { text-decoration: none; color: inherit; }
 .updates-section {
     background: var(--white);
     border-bottom: 1px solid var(--gold-100);
-    padding: 5rem 0;
+    padding: 4.5rem 0 2.75rem;
 }
 
 .section-header {
@@ -679,9 +679,26 @@ a { text-decoration: none; color: inherit; }
     background: linear-gradient(180deg, rgba(255,251,240,0), var(--gold-50) 70%);
 }
 
+
+.menu-accordion--static .menu-chevron,
+.menu-accordion--static.is-expanded .menu-chevron {
+    transform: rotate(0deg);
+}
+
+.menu-accordion--static:not(.is-expanded) .menu-item:nth-child(3) {
+    opacity: 1;
+}
+
+.menu-accordion--static:not(.is-expanded) .menu-accordion-body {
+    padding-bottom: 0.75rem;
+}
+
+.menu-accordion--static:not(.is-expanded) .menu-accordion-body::after {
+    display: none;
+}
 /* ── Location ── */
 .location-section {
-    background: var(--gold-900);
+    background: linear-gradient(180deg, var(--gold-900) 0%, var(--gold-950) 100%);
     color: var(--white);
     min-height: auto;
     padding: 4rem 0 2rem;

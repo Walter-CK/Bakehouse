@@ -240,7 +240,7 @@
             </details>
 
             <!-- Salad Rolls -->
-            <details class="menu-accordion" open>
+            <details class="menu-accordion menu-accordion--static" open>
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-seedling"></i> Salad Rolls</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -252,9 +252,9 @@
             </details>
 
             <!-- Sandwiches -->
-            <details class="menu-accordion" open>
+            <details class="menu-accordion menu-accordion--static" open>
                 <summary class="menu-accordion-title">
-                    <span><i class="fa-solid fa-sandwich"></i> Sandwiches</span>
+                    <span><i class="fa-solid fa-burger"></i> Sandwiches</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
                 </summary>
                 <div class="menu-accordion-body">
@@ -469,13 +469,17 @@
     // Menu previews
     document.querySelectorAll('.menu-accordion').forEach(accordion => {
         const title = accordion.querySelector('.menu-accordion-title');
+        const isStatic = accordion.classList.contains('menu-accordion--static');
         accordion.open = true;
-        title.setAttribute('aria-expanded', 'false');
+        title.setAttribute('aria-expanded', isStatic ? 'true' : 'false');
 
         title.addEventListener('click', event => {
             event.preventDefault();
-            const expanded = accordion.classList.toggle('is-expanded');
             accordion.open = true;
+
+            if (isStatic) return;
+
+            const expanded = accordion.classList.toggle('is-expanded');
             title.setAttribute('aria-expanded', String(expanded));
         });
     });
