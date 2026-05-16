@@ -120,26 +120,34 @@ a { text-decoration: none; color: inherit; }
 .nav-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding: 0 0.8rem;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.65rem;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.45rem;
+    min-width: 0;
     font-family: 'DM Serif Display', serif;
     font-size: 1.2rem;
     color: var(--gold-900);
-    flex-shrink: 0;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .nav-logo strong { color: var(--gold-600); font-weight: 400; }
 
+.nav-logo span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .nav-logo-img {
     width: 36px;
     height: 36px;
@@ -160,14 +168,31 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-links a:not(.btn):hover { color: var(--gold-600); }
 
-.nav-call-mobile { font-size: 0.875rem; padding: 0.5rem 1rem; }
+.nav-call-mobile { font-size: 0.875rem; padding: 0.5rem 0.8rem; flex-shrink: 0; }
 
 @media (min-width: 768px) {
+    .nav-inner { padding: 0 1.25rem; gap: 1rem; }
     .nav-links { display: flex; }
-    .nav-logo { font-size: 1.4rem; }
+    .nav-logo { font-size: 1.4rem; flex: 0 1 auto; }
     .nav-call-mobile { display: none; }
 }
 
+
+@media (max-width: 380px) {
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .nav-logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-call-mobile {
+        font-size: 0.82rem;
+        padding-inline: 0.65rem;
+    }
+}
 /* ── Hero ── */
 .hero {
     position: relative;
@@ -615,11 +640,6 @@ a { text-decoration: none; color: inherit; }
     margin-bottom: 0.1rem;
 }
 
-.menu-item p {
-    font-size: 0.73rem;
-    color: var(--gray-500);
-    line-height: 1.4;
-}
 
 .menu-price {
     font-weight: 700;
@@ -638,13 +658,14 @@ a { text-decoration: none; color: inherit; }
 .location-section {
     background: var(--gold-900);
     color: var(--white);
-    padding: 5rem 0;
+    min-height: auto;
+    padding: 4rem 0 2rem;
 }
 
 .location-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.25rem;
     align-items: center;
 }
 
@@ -711,7 +732,7 @@ a { text-decoration: none; color: inherit; }
 
 .location-map {
     position: relative;
-    height: 380px;
+    height: 340px;
     border-radius: 1rem;
     overflow: hidden;
     border: 4px solid var(--gold-800);
