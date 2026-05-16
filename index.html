@@ -142,7 +142,7 @@
             <div class="menu-grid">
 
             <!-- Bread -->
-            <details class="menu-accordion" open>
+            <details class="menu-accordion">
                 <summary class="menu-accordion-title">
                     <span><i class="fa-solid fa-bread-slice"></i> Bread</span>
                     <i class="fa-solid fa-chevron-down menu-chevron"></i>
@@ -465,37 +465,23 @@
     
     lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
 
-    // Horizontal scroll on mouse wheel over updates
+    // Horizontal scroll on mouse wheel over updates.
+    // Convert vertical mouse-wheel movement into horizontal scrolling only while
+    // the updates strip can continue moving, so the page never feels trapped.
     const updatesScroll = document.getElementById('updatesScroll');
     updatesScroll.addEventListener('wheel', function(e) {
-        // Let pure horizontal trackpad swipes pass through
-        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-        e.preventDefault();
-        e.stopPropagation();
-        this.scrollLeft += e.deltaY * 1.5;
-    }, { passive: false });
+        const primaryDelta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        const maxScrollLeft = this.scrollWidth - this.clientWidth;
+        const atStart = this.scrollLeft <= 0;
+        const atEnd = this.scrollLeft >= maxScrollLeft - 1;
+        const scrollingLeft = primaryDelta < 0;
+        const scrollingRight = primaryDelta > 0;
 
-    // Menu accordion: show 3 preview items, rest hidden until expanded
-    document.querySelectorAll('.menu-accordion').forEach(accordion => {
-        const items = accordion.querySelectorAll('.menu-item');
-        if (items.length > 3) {
-            items.forEach((item, i) => {
-                if (i >= 3) item.classList.add('menu-item--hidden');
-            });
-        }
-        accordion.addEventListener('toggle', () => {
-            const hidden = accordion.querySelectorAll('.menu-item--hidden');
-            if (accordion.open) {
-                hidden.forEach(item => item.style.display = '');
-            } else {
-                hidden.forEach(item => item.style.display = 'none');
-            }
-        });
-        // Initially hide extra items that are closed
-        if (!accordion.open) {
-            accordion.querySelectorAll('.menu-item--hidden').forEach(item => item.style.display = 'none');
-        }
-    });
+        if ((scrollingLeft && atStart) || (scrollingRight && atEnd)) return;
+
+        e.preventDefault();
+        this.scrollBy({ left: primaryDelta, behavior: 'auto' });
+    }, { passive: false });
     </script>
 </body>
 </html>
