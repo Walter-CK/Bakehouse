@@ -469,15 +469,12 @@
     // Menu previews
     document.querySelectorAll('.menu-accordion').forEach(accordion => {
         const title = accordion.querySelector('.menu-accordion-title');
-        const isStatic = accordion.classList.contains('menu-accordion--static');
         accordion.open = true;
-        title.setAttribute('aria-expanded', isStatic ? 'true' : 'false');
+        title.setAttribute('aria-expanded', 'false');
 
         title.addEventListener('click', event => {
             event.preventDefault();
             accordion.open = true;
-
-            if (isStatic) return;
 
             const expanded = accordion.classList.toggle('is-expanded');
             title.setAttribute('aria-expanded', String(expanded));
