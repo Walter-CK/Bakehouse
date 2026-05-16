@@ -24,8 +24,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--gold-900);
-    /* Prevent any overscroll/rubber-band */
+    background-color: var(--gold-50);
     overscroll-behavior: none;
     overflow: hidden;
     height: 100%;
