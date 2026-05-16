@@ -24,7 +24,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: #78350f;
+    background: var(--gold-900);
     overflow-x: hidden;
     max-width: 100%;
     min-height: 100%;
@@ -562,7 +562,7 @@ a { text-decoration: none; color: inherit; }
     border: 1px solid var(--gold-200);
     border-radius: 0.75rem;
     overflow: hidden;
-    background: var(--gold-50);
+    background: linear-gradient(180deg, var(--gold-50) 0%, var(--white) 100%);
     /* Don't stretch taller than content */
     align-self: start;
 }
@@ -586,6 +586,7 @@ a { text-decoration: none; color: inherit; }
 }
 .menu-accordion-title::-webkit-details-marker { display: none; }
 .menu-accordion-title:hover { background: var(--gold-100); }
+.menu-accordion-title:hover .menu-chevron { background: var(--gold-100); border-color: var(--gold-500); }
 
 .menu-accordion-title span {
     display: flex;
@@ -596,14 +597,25 @@ a { text-decoration: none; color: inherit; }
 .menu-accordion-title i:not(.menu-chevron) { color: var(--gold-500); font-size: 0.95rem; }
 
 .menu-chevron {
-    font-size: 0.7rem;
-    color: var(--gold-500);
-    transition: transform 0.25s;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--gold-300);
+    border-radius: 9999px;
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(217,119,6,0.14);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    color: var(--gold-600);
+    transition: transform 0.25s, background 0.15s, border-color 0.15s;
     flex-shrink: 0;
 }
 
 .menu-accordion.is-expanded .menu-chevron {
     transform: rotate(180deg);
+    background: var(--gold-100);
+    border-color: var(--gold-500);
 }
 
 .menu-accordion:not(.is-expanded) .menu-chevron {
@@ -616,6 +628,7 @@ a { text-decoration: none; color: inherit; }
 
 .menu-accordion:not(.is-expanded) .menu-item:nth-child(3) {
     border-bottom: none;
+    opacity: 0.68;
 }
 
 .menu-accordion-body {
@@ -652,6 +665,18 @@ a { text-decoration: none; color: inherit; }
 /* Closed accordions still show the first three items as a menu preview. */
 .menu-accordion:not(.is-expanded) .menu-accordion-body {
     position: relative;
+    padding-bottom: 1.25rem;
+}
+
+.menu-accordion:not(.is-expanded) .menu-accordion-body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2.4rem;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,251,240,0), var(--gold-50) 70%);
 }
 
 /* ── Location ── */
