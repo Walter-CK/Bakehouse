@@ -24,7 +24,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--gold-50);
+    background: linear-gradient(to bottom, #ffffff 50%, var(--gold-900) 50%);
     overscroll-behavior: none;
     height: 100%;
 }
