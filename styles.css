@@ -24,7 +24,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: linear-gradient(to bottom, #ffffff 50%, #78350f 50%);
+    background: #78350f;
     overscroll-behavior: none;
     height: 100%;
 }
