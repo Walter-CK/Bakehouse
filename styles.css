@@ -332,7 +332,7 @@ a { text-decoration: none; color: inherit; }
 .updates-section {
     background: var(--white);
     border-bottom: 1px solid var(--gold-100);
-    padding: 4.5rem 0 3.25rem;
+    padding: 5rem 0;
 }
 
 .section-header {
@@ -502,7 +502,7 @@ a { text-decoration: none; color: inherit; }
 /* ── Menu ── */
 .menu-section {
     background: var(--white);
-    padding: 3.75rem 0 5rem;
+    padding: 5rem 0;
     min-height: 100svh;
 }
 
@@ -554,7 +554,6 @@ a { text-decoration: none; color: inherit; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.75rem;
     padding: 1rem 1.1rem;
     cursor: pointer;
     font-size: 0.95rem;
@@ -571,35 +570,11 @@ a { text-decoration: none; color: inherit; }
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    min-width: 0;
-    flex: 1;
 }
 
 .menu-accordion-title i:not(.menu-chevron) { color: var(--gold-500); font-size: 0.95rem; }
 
-.menu-accordion-title::after {
-    content: "Show all";
-    order: 2;
-    flex-shrink: 0;
-    padding: 0.28rem 0.55rem;
-    border: 1px solid var(--gold-200);
-    border-radius: 9999px;
-    background: var(--gold-100);
-    color: var(--gold-700);
-    font-family: 'Inter', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1;
-    white-space: nowrap;
-}
-
-.menu-accordion[open] .menu-accordion-title::after {
-    content: "Show fewer";
-    background: var(--white);
-}
-
 .menu-chevron {
-    order: 3;
     font-size: 0.7rem;
     color: var(--gold-500);
     transition: transform 0.25s;
@@ -667,16 +642,6 @@ details[open] .menu-chevron {
     position: relative;
 }
 
-@media (max-width: 420px) {
-    .menu-accordion-title::after {
-        content: "More";
-        padding-inline: 0.45rem;
-    }
-
-    .menu-accordion[open] .menu-accordion-title::after {
-        content: "Less";
-    }
-}
 /* ── Location ── */
 .location-section {
     background: var(--gold-900);
