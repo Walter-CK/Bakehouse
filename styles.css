@@ -697,9 +697,9 @@ a { text-decoration: none; color: inherit; }
 .location-section {
     background: var(--gold-900);
     color: var(--white);
-    min-height: 100svh;
+    min-height: 90svh;
     justify-content: flex-start;
-    padding: 4rem 0 max(8rem, 16svh);
+    padding: 6rem 0 max(8rem, 16svh);
 }
 
 .location-grid {
