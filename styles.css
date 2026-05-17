@@ -155,43 +155,125 @@ a { text-decoration: none; color: inherit; }
     object-fit: contain;
 }
 
-.nav-links {
-    display: none;
+.nav-actions {
+    display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    flex: 0 0 auto;
 }
 
-.nav-links a:not(.btn) {
-    color: var(--gray-600);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.15s;
+.nav-action {
+    --action-color: var(--gold-600);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 0.68rem;
+    border-radius: 9999px;
+    color: var(--white);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--action-color), #ffffff 12%), var(--action-color));
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--action-color), transparent 70%);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+    transition: transform 0.15s, box-shadow 0.2s, filter 0.2s;
 }
-.nav-links a:not(.btn):hover { color: var(--gold-600); }
 
-.nav-call-mobile { font-size: 0.875rem; padding: 0.5rem 0.8rem; flex-shrink: 0; }
+.nav-action:hover {
+    transform: translateY(-1px);
+    filter: saturate(1.06);
+    box-shadow: 0 8px 18px color-mix(in srgb, var(--action-color), transparent 62%);
+}
+
+.nav-action-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.18);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.nav-action--doordash { --action-color: #eb1700; }
+.nav-action--uber { --action-color: #06c167; }
+.nav-action--village { --action-color: #ab499c; }
+.nav-action--phone { --action-color: var(--gold-600); }
 
 @media (min-width: 768px) {
     .nav-inner { padding: 0 1.25rem; gap: 1rem; }
-    .nav-links { display: flex; }
     .nav-logo { font-size: 1.4rem; flex: 0 1 auto; }
-    .nav-call-mobile { display: none; }
+    .nav-actions { gap: 0.55rem; }
+    .nav-action { height: 42px; min-width: 42px; padding: 0 0.92rem; font-size: 0.9rem; }
 }
 
+@media (max-width: 720px) {
+    .nav-action {
+        width: 38px;
+        padding: 0;
+    }
+
+    .nav-action-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .nav-action--phone i {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .nav-inner {
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .nav-logo {
+        flex: 0 0 auto;
+    }
+
+    .nav-logo span {
+        display: none;
+    }
+
+    .nav-actions {
+        flex: 0 0 auto;
+    }
+}
 
 @media (max-width: 380px) {
-    .nav-logo {
-        font-size: 1rem;
-    }
+    .nav-inner { padding-inline: 0.6rem; gap: 0.35rem; }
 
     .nav-logo-img {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 
-    .nav-call-mobile {
-        font-size: 0.82rem;
-        padding-inline: 0.65rem;
+    .nav-actions { gap: 0.3rem; }
+
+    .nav-action {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+    }
+
+    .nav-action-mark {
+        width: 1.35rem;
+        height: 1.35rem;
+        font-size: 0.68rem;
     }
 }
 /* ── Hero ── */
