@@ -405,8 +405,8 @@ a { text-decoration: none; color: inherit; }
     -ms-overflow-style: none;
     cursor: grab;
     /* Keep iOS rubber-banding and trackpad gestures inside this strip. */
-    overscroll-behavior-x: contain;
-    touch-action: pan-x pan-y;
+    overscroll-behavior: contain;
+    touch-action: pan-x;
 }
 .updates-scroll:active { cursor: grabbing; }
 .updates-scroll::-webkit-scrollbar { display: none; }
@@ -697,8 +697,9 @@ a { text-decoration: none; color: inherit; }
 .location-section {
     background: var(--gold-900);
     color: var(--white);
-    min-height: auto;
-    padding: 4rem 0 2rem;
+    min-height: 100svh;
+    justify-content: flex-start;
+    padding: 4rem 0 max(8rem, 16svh);
 }
 
 .location-grid {

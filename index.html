@@ -481,18 +481,11 @@
         });
     });
     // Horizontal scroll on mouse wheel over updates.
-    // Convert vertical mouse-wheel movement into horizontal scrolling only while
-    // the updates strip can continue moving, so the page never feels trapped.
+    // Keep every wheel gesture captured by the updates strip so vertical page
+    // scrolling never leaks through at either end of the horizontal list.
     const updatesScroll = document.getElementById('updatesScroll');
     updatesScroll.addEventListener('wheel', function(e) {
         const primaryDelta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-        const maxScrollLeft = this.scrollWidth - this.clientWidth;
-        const atStart = this.scrollLeft <= 0;
-        const atEnd = this.scrollLeft >= maxScrollLeft - 1;
-        const scrollingLeft = primaryDelta < 0;
-        const scrollingRight = primaryDelta > 0;
-
-        if ((scrollingLeft && atStart) || (scrollingRight && atEnd)) return;
 
         e.preventDefault();
         this.scrollBy({ left: primaryDelta, behavior: 'auto' });
